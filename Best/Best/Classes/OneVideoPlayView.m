@@ -10,10 +10,8 @@
 
 @interface OneVideoPlayView()
 
-/* 播放器 */
 @property (nonatomic, strong) AVPlayer *player;
 
-// 播放器的Layer
 @property (weak, nonatomic) AVPlayerLayer *playerLayer;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -22,10 +20,8 @@
 @property (weak, nonatomic) IBOutlet UISlider *progressSlider;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
-// 记录当前是否显示了工具栏
 @property (assign, nonatomic) BOOL isShowToolView;
 
-/* 定时器 */
 @property (nonatomic, strong) NSTimer *progressTimer;
 
 #pragma mark - 监听事件的处理
@@ -40,7 +36,6 @@
 
 @implementation OneVideoPlayView
 
-// 快速创建View的方法
 + (instancetype)videoPlayView
 {
     return [[[NSBundle mainBundle] loadNibNamed:@"OneVideoPlayView" owner:nil options:nil] firstObject];
@@ -80,7 +75,6 @@
     [self.player play];
 }
 
-// 是否显示工具的View
 - (IBAction)tapAction:(UITapGestureRecognizer *)sender {
     [UIView animateWithDuration:0.5 animations:^{
         if (self.isShowToolView) {
@@ -92,7 +86,6 @@
         }
     }];
 }
-// 暂停按钮的监听
 - (IBAction)playOrPause:(UIButton *)sender {
     sender.selected = !sender.selected;
     if (sender.selected) {
@@ -123,8 +116,7 @@
 {
     // 1.更新时间
     self.timeLabel.text = [self timeString];
-    
-    // 2.设置进度条的value
+   
     self.progressSlider.value = CMTimeGetSeconds(self.player.currentTime) / CMTimeGetSeconds(self.player.currentItem.duration);
 }
 
@@ -136,7 +128,6 @@
     return [self stringWithCurrentTime:currentTime duration:duration];
 }
 
-// 切换屏幕的方向
 - (IBAction)switchOrientation:(UIButton *)sender {
     sender.selected = !sender.selected;
     if ([self.delegate respondsToSelector:@selector(videoplayViewSwitchOrientation:)]) {
@@ -147,8 +138,7 @@
 - (IBAction)slider {
     [self addProgressTimer];
     NSTimeInterval currentTime = CMTimeGetSeconds(self.player.currentItem.duration) * self.progressSlider.value;
-    
-    // 设置当前播放时间
+
     [self.player seekToTime:CMTimeMakeWithSeconds(currentTime, NSEC_PER_SEC) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
     
     [self.player play];

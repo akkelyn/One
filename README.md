@@ -1,1 +1,16 @@
-# One
+1、主界面
+http://github.com/akkelyn/one/raw/master/images/主界面.png
+2、推荐标签
+http://github.com/akkelyn/one/raw/master/images/推荐标签.png
+3、视频
+http://github.com/akkelyn/one/raw/master/images/视频界面.png
+4、声音
+http://github.com/akkelyn/one/raw/master/images/声音界面.png
+5、文字
+http://github.com/akkelyn/one/raw/master/images/文字界面.png
+6、关注
+http://github.com/akkelyn/one/raw/master/images/关注界面.png
+7、登录界面
+http://github.com/akkelyn/one/raw/master/images/登录界面.png
+8、推荐关注
+http://github.com/akkelyn/one/raw/master/images/推荐关注.png
