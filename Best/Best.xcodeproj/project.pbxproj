@@ -25,6 +25,9 @@
 		A80DA5101CCFC9C500386792 /* OneWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A80DA50E1CCFC9C500386792 /* OneWebViewController.m */; };
 		A80DA5111CCFC9C500386792 /* OneWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A80DA50F1CCFC9C500386792 /* OneWebViewController.xib */; };
 		A816A2031CD0E4DD00D8D195 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A816A2021CD0E4DD00D8D195 /* UIImage+Extension.m */; };
+		A819B49A1CDA108E004169BF /* OneVideoPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A819B4991CDA108E004169BF /* OneVideoPlayView.m */; };
+		A819B49C1CDA10C1004169BF /* OneVideoPlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A819B49B1CDA10C1004169BF /* OneVideoPlayView.xib */; };
+		A819B49F1CDA14BF004169BF /* FullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A819B49E1CDA14BF004169BF /* FullViewController.m */; };
 		A86DC2E51CCCA45500786D01 /* OneTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A86DC2E41CCCA45500786D01 /* OneTopicViewController.m */; };
 		A88762811CCD4F5700A13538 /* NSDate+NSDateExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A88762801CCD4F5700A13538 /* NSDate+NSDateExtension.m */; };
 		A88762841CCD558A00A13538 /* OneConst.m in Sources */ = {isa = PBXBuildFile; fileRef = A88762831CCD558A00A13538 /* OneConst.m */; };
@@ -126,6 +129,11 @@
 		A80DA50F1CCFC9C500386792 /* OneWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneWebViewController.xib; sourceTree = "<group>"; };
 		A816A2011CD0E4DD00D8D195 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		A816A2021CD0E4DD00D8D195 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		A819B4981CDA108E004169BF /* OneVideoPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneVideoPlayView.h; sourceTree = "<group>"; };
+		A819B4991CDA108E004169BF /* OneVideoPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneVideoPlayView.m; sourceTree = "<group>"; };
+		A819B49B1CDA10C1004169BF /* OneVideoPlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneVideoPlayView.xib; sourceTree = "<group>"; };
+		A819B49D1CDA14BF004169BF /* FullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullViewController.h; sourceTree = "<group>"; };
+		A819B49E1CDA14BF004169BF /* FullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullViewController.m; sourceTree = "<group>"; };
 		A86DC2E31CCCA45500786D01 /* OneTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneTopicViewController.h; sourceTree = "<group>"; };
 		A86DC2E41CCCA45500786D01 /* OneTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneTopicViewController.m; sourceTree = "<group>"; };
 		A887627F1CCD4F5700A13538 /* NSDate+NSDateExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NSDateExtension.h"; sourceTree = "<group>"; };
@@ -262,6 +270,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A819B48F1CD9C9FF004169BF /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				A819B4981CDA108E004169BF /* OneVideoPlayView.h */,
+				A819B4991CDA108E004169BF /* OneVideoPlayView.m */,
+				A819B49B1CDA10C1004169BF /* OneVideoPlayView.xib */,
+				A819B49D1CDA14BF004169BF /* FullViewController.h */,
+				A819B49E1CDA14BF004169BF /* FullViewController.m */,
+			);
+			name = Tool;
+			sourceTree = "<group>";
+		};
 		A8A8A6C91CC9E345003ABC46 = {
 			isa = PBXGroup;
 			children = (
@@ -320,6 +340,7 @@
 		A8A8A6FE1CC9E3F4003ABC46 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A819B48F1CD9C9FF004169BF /* Tool */,
 				A8A8A6FF1CC9E3F4003ABC46 /* Essence */,
 				A8A8A7051CC9E3F4003ABC46 /* FriendTrends */,
 				A8A8A70F1CC9E3F4003ABC46 /* Me */,
@@ -731,6 +752,7 @@
 			files = (
 				A8EA27121CD3B59500E13FC7 /* OneCommentCell.xib in Resources */,
 				A8BD5DE71CCB68FC0035226C /* OneLoginViewController.xib in Resources */,
+				A819B49C1CDA10C1004169BF /* OneVideoPlayView.xib in Resources */,
 				A8EA27001CD3B33C00E13FC7 /* OnetopicCell.xib in Resources */,
 				A8B91FB61CCF4ACF005A33FA /* PublishViewController.xib in Resources */,
 				A80DA5111CCFC9C500386792 /* OneWebViewController.xib in Resources */,
@@ -843,8 +865,10 @@
 				A8F50DF71CD3BD2000326BD4 /* OneCommendCell.m in Sources */,
 				A8BD5DED1CCB89340035226C /* OneTextField.m in Sources */,
 				A8A8A7351CC9E3F4003ABC46 /* OneRecommendViewController.m in Sources */,
+				A819B49A1CDA108E004169BF /* OneVideoPlayView.m in Sources */,
 				A8C0E5A51CCDD82200D58937 /* ShowPictureViewController.m in Sources */,
 				A8BD5DE61CCB68FC0035226C /* OneLoginViewController.m in Sources */,
+				A819B49F1CDA14BF004169BF /* FullViewController.m in Sources */,
 				A86DC2E51CCCA45500786D01 /* OneTopicViewController.m in Sources */,
 				A8BD5DEA1CCB74B30035226C /* VerticalLayoutButton.m in Sources */,
 				A816A2031CD0E4DD00D8D195 /* UIImage+Extension.m in Sources */,
@@ -971,7 +995,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PREFIX_HEADER = "/Users/akkelyn/Desktop/workspace/Best-/Best/Best/Classes/Others/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = /Users/akkelyn/Desktop/workspace/One/Best/Best/Classes/Others/PrefixHeader.pch;
 				INFOPLIST_FILE = Best/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -985,7 +1009,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PREFIX_HEADER = "/Users/akkelyn/Desktop/workspace/Best-/Best/Best/Classes/Others/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = /Users/akkelyn/Desktop/workspace/One/Best/Best/Classes/Others/PrefixHeader.pch;
 				INFOPLIST_FILE = Best/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

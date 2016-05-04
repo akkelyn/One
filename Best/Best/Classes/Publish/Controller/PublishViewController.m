@@ -37,8 +37,8 @@
     [sloganView pop_addAnimation:anim forKey:nil];
     
     NSArray *images = @[@"publish-video", @"publish-picture", @"publish-text", @"publish-audio", @"publish-review", @"publish-offline"];
-    NSArray *titles = @[@"发视频", @"发图片", @"发段子", @"发声音", @"审帖", @"离线下载"];
-    int maxCols = 3;//列数
+    NSArray *titles = @[@"视频", @"图片", @"段子", @"声音", @"审帖", @"离线下载"];
+    int maxCols = 3;
     CGFloat buttonW = 72;
     CGFloat buttonH = 100;
     CGFloat startX = 15;

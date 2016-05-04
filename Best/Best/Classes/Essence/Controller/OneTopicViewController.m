@@ -91,9 +91,10 @@ static NSString *topicId = @"topicCell";
     self.params = params;
     
     [[AFHTTPSessionManager manager]GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        LynLog(@"%@",responseObject[@"list"]);
          if (self.params != params) return ;
         self.maxtime = responseObject[@"info"][@"maxtime"];
-//        LynLog(@"%@",self.maxtime);
+       LynLog(@"%@",responseObject[@"list"]);
         self.topicsArray = [OneTopci mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self.tableView reloadData];
         [self.tableView.mj_header endRefreshing];

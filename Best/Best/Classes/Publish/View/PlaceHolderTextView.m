@@ -41,10 +41,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [OneNoteCenter removeObserver:self];
-}
 - (void)textDidChange
 {
     self.placeholderLabel.hidden = self.hasText;
@@ -96,6 +92,9 @@
     
     [self textDidChange];
 }
-
+- (void)dealloc
+{
+    [OneNoteCenter removeObserver:self];
+}
 
 @end

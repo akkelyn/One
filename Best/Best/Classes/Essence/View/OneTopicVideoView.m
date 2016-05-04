@@ -10,29 +10,45 @@
 #import "OneTopci.h"
 #import <UIImageView+WebCache.h>
 #import "ShowPictureViewController.h"
+#import "OneVideoPlayView.h"
 
-@interface OneTopicVideoView ()
+@interface OneTopicVideoView ()<OneVideoPlayViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *playcountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *videotimeLabel;
+@property (nonatomic, weak) OneVideoPlayView *playView;
+@property (weak, nonatomic) IBOutlet UIButton *playBtn;
 
 @end
 
 @implementation OneTopicVideoView
 
+-(OneVideoPlayView *)playView
+{
+    if (_playView == nil) {
+        _playView = [OneVideoPlayView videoPlayView];
+        _playView.frame = self.imageView.bounds;
+        [self.imageView addSubview:_playView];
+        _playView.delegate = self;
+        self.playView = _playView;
+    }
+    
+    return _playView;
+}
 - (void)awakeFromNib
 {
     self.autoresizingMask = UIViewAutoresizingNone;
     self.imageView.userInteractionEnabled = YES;
-    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPicture)]];
+//    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playVideo)]];
+    
+  
 }
 
-- (void)showPicture
-{
-    ShowPictureViewController  *showPicture = [[ShowPictureViewController alloc] init];
-    showPicture.topci = self.topci;
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:showPicture animated:YES completion:nil];
-}
+//- (void)playVideo
+//{
+//    LynLog(@"playvideo");
+//}
 
 - (void)setTopci:(OneTopci *)topci
 {
@@ -44,6 +60,17 @@
     NSInteger minute = topci.videotime / 60;
     NSInteger second = topci.videotime % 60;
     self.videotimeLabel.text = [NSString stringWithFormat:@"%02zd:%02zd", minute, second];
+    
+   
+}
+- (IBAction)buttonClick:(id)sender {
+    LynLog(@"buttonclick");
+    self.playBtn.hidden = YES;
+    self.videotimeLabel.hidden = YES;
+    self.playcountLabel.hidden = YES;
+    AVPlayerItem *item = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:self.topci.videouri]];
+    [self.playView setPlayerItem:item];
+
 }
 
 @end

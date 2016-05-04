@@ -49,6 +49,9 @@
 /** 播放次数 */
 @property (nonatomic, assign) NSInteger playcount;
 
+/** 视频的url */
+@property(nonatomic,strong)NSString *videouri;
+
 /* *******************辅助 ************************ */
 
 /**每个cell的高度*/
