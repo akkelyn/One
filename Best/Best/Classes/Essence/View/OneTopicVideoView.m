@@ -40,15 +40,15 @@
 {
     self.autoresizingMask = UIViewAutoresizingNone;
     self.imageView.userInteractionEnabled = YES;
-    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playVideo)]];
+//    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playVideo)]];
     
   
 }
 
-- (void)playVideo
-{
-    LynLog(@"playvideo");
-}
+//- (void)playVideo
+//{
+//    LynLog(@"playvideo");
+//}
 
 - (void)setTopci:(OneTopci *)topci
 {

@@ -10,11 +10,11 @@
             <rect key="frame" x="0.0" y="0.0" width="427" height="239"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6rY-Jb-Qiw">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6rY-Jb-Qiw">
                     <rect key="frame" x="0.0" y="0.0" width="427" height="239"/>
                     <gestureRecognizers/>
                     <connections>
-                        <outletCollection property="gestureRecognizers" destination="xKO-k8-rnb" appends="YES" id="oKs-Pf-aG3"/>
+                        <outletCollection property="gestureRecognizers" destination="xKO-k8-rnb" appends="YES" id="cAU-6X-7J4"/>
                     </connections>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jCb-0x-3Wp" userLabel="工具条">
@@ -92,7 +92,7 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="imageView" destination="6rY-Jb-Qiw" id="pRp-rN-P0a"/>
+                <outlet property="imageView" destination="6rY-Jb-Qiw" id="8ql-jJ-qeN"/>
                 <outlet property="playOrPauseBtn" destination="uy0-cu-F5i" id="xke-sJ-Y1h"/>
                 <outlet property="progressSlider" destination="4AW-Z5-jYX" id="xVI-9n-9Us"/>
                 <outlet property="timeLabel" destination="R0y-3A-im0" id="rEQ-Fw-31d"/>
@@ -102,7 +102,7 @@
         </view>
         <tapGestureRecognizer id="xKO-k8-rnb" userLabel="背景图片tap手势">
             <connections>
-                <action selector="tapAction:" destination="iN0-l3-epB" id="oUV-6e-V2H"/>
+                <action selector="tapAction:" destination="iN0-l3-epB" id="lSN-sb-Jo9"/>
             </connections>
         </tapGestureRecognizer>
     </objects>

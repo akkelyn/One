@@ -9,9 +9,7 @@
 #import "OneVideoPlayView.h"
 
 @interface OneVideoPlayView()
-
 @property (nonatomic, strong) AVPlayer *player;
-
 @property (weak, nonatomic) AVPlayerLayer *playerLayer;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -21,7 +19,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
 @property (assign, nonatomic) BOOL isShowToolView;
-
 @property (nonatomic, strong) NSTimer *progressTimer;
 
 #pragma mark - 监听事件的处理
@@ -31,7 +28,6 @@
 - (IBAction)startSlider;
 - (IBAction)tapAction:(UITapGestureRecognizer *)sender;
 - (IBAction)sliderValueChange;
-
 @end
 
 @implementation OneVideoPlayView
@@ -47,8 +43,8 @@
     self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
     [self.imageView.layer addSublayer:self.playerLayer];
     
-    self.toolView.alpha = 1;
-    self.isShowToolView = YES;
+    self.toolView.alpha = 0;
+    self.isShowToolView = NO;
     
     [self.progressSlider setThumbImage:[UIImage imageNamed:@"thumbImage"] forState:UIControlStateNormal];
     [self.progressSlider setMaximumTrackImage:[UIImage imageNamed:@"MaximumTrackImage"] forState:UIControlStateNormal];
@@ -66,15 +62,12 @@
     
     self.playerLayer.frame = self.bounds;
 }
-
-#pragma mark - 设置播放的视频
 - (void)setPlayerItem:(AVPlayerItem *)playerItem
 {
     _playerItem = playerItem;
     [self.player replaceCurrentItemWithPlayerItem:playerItem];
     [self.player play];
 }
-
 - (IBAction)tapAction:(UITapGestureRecognizer *)sender {
     [UIView animateWithDuration:0.5 animations:^{
         if (self.isShowToolView) {
@@ -98,8 +91,6 @@
         [self removeProgressTimer];
     }
 }
-
-#pragma mark - 定时器操作
 - (void)addProgressTimer
 {
     self.progressTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateProgressInfo) userInfo:nil repeats:YES];
@@ -114,9 +105,8 @@
 
 - (void)updateProgressInfo
 {
-    // 1.更新时间
     self.timeLabel.text = [self timeString];
-   
+    
     self.progressSlider.value = CMTimeGetSeconds(self.player.currentTime) / CMTimeGetSeconds(self.player.currentItem.duration);
 }
 
@@ -127,7 +117,6 @@
     
     return [self stringWithCurrentTime:currentTime duration:duration];
 }
-
 - (IBAction)switchOrientation:(UIButton *)sender {
     sender.selected = !sender.selected;
     if ([self.delegate respondsToSelector:@selector(videoplayViewSwitchOrientation:)]) {
@@ -138,7 +127,7 @@
 - (IBAction)slider {
     [self addProgressTimer];
     NSTimeInterval currentTime = CMTimeGetSeconds(self.player.currentItem.duration) * self.progressSlider.value;
-
+   
     [self.player seekToTime:CMTimeMakeWithSeconds(currentTime, NSEC_PER_SEC) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
     
     [self.player play];
@@ -167,5 +156,4 @@
     
     return [NSString stringWithFormat:@"%@/%@", currentString, durationString];
 }
-
 @end
