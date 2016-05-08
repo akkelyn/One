@@ -113,6 +113,7 @@
 - (NSString *)timeString
 {
     NSTimeInterval duration = CMTimeGetSeconds(self.player.currentItem.duration);
+    
     NSTimeInterval currentTime = CMTimeGetSeconds(self.player.currentTime);
     
     return [self stringWithCurrentTime:currentTime duration:duration];
@@ -127,9 +128,9 @@
 - (IBAction)slider {
     [self addProgressTimer];
     NSTimeInterval currentTime = CMTimeGetSeconds(self.player.currentItem.duration) * self.progressSlider.value;
-   
-    [self.player seekToTime:CMTimeMakeWithSeconds(currentTime, NSEC_PER_SEC) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
     
+   //让player到指定的当前的时间开始播放  NSEC_PER_SEC kCMTimeZero两个为特定的参数
+    [self.player seekToTime:CMTimeMakeWithSeconds(currentTime, NSEC_PER_SEC) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
     [self.player play];
 }
 

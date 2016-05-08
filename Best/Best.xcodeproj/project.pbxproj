@@ -129,11 +129,11 @@
 		A80DA50F1CCFC9C500386792 /* OneWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneWebViewController.xib; sourceTree = "<group>"; };
 		A816A2011CD0E4DD00D8D195 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		A816A2021CD0E4DD00D8D195 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
-		A819B4981CDA108E004169BF /* OneVideoPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneVideoPlayView.h; sourceTree = "<group>"; };
-		A819B4991CDA108E004169BF /* OneVideoPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneVideoPlayView.m; sourceTree = "<group>"; };
-		A819B49B1CDA10C1004169BF /* OneVideoPlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneVideoPlayView.xib; sourceTree = "<group>"; };
-		A819B49D1CDA14BF004169BF /* FullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullViewController.h; sourceTree = "<group>"; };
-		A819B49E1CDA14BF004169BF /* FullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullViewController.m; sourceTree = "<group>"; };
+		A819B4981CDA108E004169BF /* OneVideoPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OneVideoPlayView.h; path = ../../OneVideoPlayView.h; sourceTree = "<group>"; };
+		A819B4991CDA108E004169BF /* OneVideoPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OneVideoPlayView.m; path = ../../OneVideoPlayView.m; sourceTree = "<group>"; };
+		A819B49B1CDA10C1004169BF /* OneVideoPlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OneVideoPlayView.xib; path = ../../OneVideoPlayView.xib; sourceTree = "<group>"; };
+		A819B49D1CDA14BF004169BF /* FullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FullViewController.h; path = ../../FullViewController.h; sourceTree = "<group>"; };
+		A819B49E1CDA14BF004169BF /* FullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FullViewController.m; path = ../../FullViewController.m; sourceTree = "<group>"; };
 		A86DC2E31CCCA45500786D01 /* OneTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneTopicViewController.h; sourceTree = "<group>"; };
 		A86DC2E41CCCA45500786D01 /* OneTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneTopicViewController.m; sourceTree = "<group>"; };
 		A887627F1CCD4F5700A13538 /* NSDate+NSDateExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NSDateExtension.h"; sourceTree = "<group>"; };
@@ -270,18 +270,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A819B48F1CD9C9FF004169BF /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-				A819B4981CDA108E004169BF /* OneVideoPlayView.h */,
-				A819B4991CDA108E004169BF /* OneVideoPlayView.m */,
-				A819B49B1CDA10C1004169BF /* OneVideoPlayView.xib */,
-				A819B49D1CDA14BF004169BF /* FullViewController.h */,
-				A819B49E1CDA14BF004169BF /* FullViewController.m */,
-			);
-			name = Tool;
-			sourceTree = "<group>";
-		};
 		A8A8A6C91CC9E345003ABC46 = {
 			isa = PBXGroup;
 			children = (
@@ -340,7 +328,6 @@
 		A8A8A6FE1CC9E3F4003ABC46 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A819B48F1CD9C9FF004169BF /* Tool */,
 				A8A8A6FF1CC9E3F4003ABC46 /* Essence */,
 				A8A8A7051CC9E3F4003ABC46 /* FriendTrends */,
 				A8A8A70F1CC9E3F4003ABC46 /* Me */,
@@ -584,6 +571,11 @@
 			children = (
 				A8A8A72A1CC9E3F4003ABC46 /* OneTabbar.h */,
 				A8A8A72B1CC9E3F4003ABC46 /* OneTabbar.m */,
+				A819B4981CDA108E004169BF /* OneVideoPlayView.h */,
+				A819B4991CDA108E004169BF /* OneVideoPlayView.m */,
+				A819B49B1CDA10C1004169BF /* OneVideoPlayView.xib */,
+				A819B49D1CDA14BF004169BF /* FullViewController.h */,
+				A819B49E1CDA14BF004169BF /* FullViewController.m */,
 				A8D47E451CCC082E00B5B0CE /* OneGuideView.h */,
 				A8D47E461CCC082E00B5B0CE /* OneGuideView.m */,
 				A8D47E481CCC084B00B5B0CE /* OneGuideView.xib */,
